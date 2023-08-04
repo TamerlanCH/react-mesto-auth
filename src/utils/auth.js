@@ -1,4 +1,4 @@
-class Api {
+class Auth {
   constructor({ url }) {
     this._url = url;
   }
@@ -43,6 +43,6 @@ class Api {
   };
 }
 
-export const auth = new Api({
+export const auth = new Auth({
   url: "https://auth.nomoreparties.co",
 });
