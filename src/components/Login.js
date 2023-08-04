@@ -16,8 +16,8 @@ const Login = ({ onLogin }) => {
                 <span className={`auth__input-error user-email-input-error ${isValid ? "" : "auth__input-error_active"}`}>{errors.email}</span>
                 <input className="auth__input" required id="password" placeholder="Пароль" name="password" type="password" value={values.password || ""} onChange={handleChange} />
                 <span className={`auth__input-error user-password-input-error ${isValid ? "" : "auth__input-error_active"}`}>{errors.password}</span>
+                <button type="submit" className="auth__button" disabled={!isValid}>Войти</button>
             </form>
-            <button type="submit" className="auth__button" disabled={!isValid} onClick={handleSubmit}>Войти</button>
         </div>
     )
 }
