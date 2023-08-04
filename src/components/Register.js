@@ -17,11 +17,9 @@ const Register = ({ onRegister }) => {
         <span className={`auth__input-error user-email-input-error ${isValid ? "" : "auth__input-error_active"}`}>{errors.email}</span>
         <input className="auth__input" required id="user-password-input" placeholder="Пароль" name="password" type="password" value={values.password || ""} onChange={handleChange} />
         <span className={`auth__input-error user-password-input-error ${isValid ? "" : "auth__input-error_active"}`}>{errors.password}</span>
+        <button className="auth__button" type="submit">Зарегистрироваться</button>
       </form>
       <div className="auth__register">
-        <button className="auth__button"
-          type="submit"
-          onClick={handleSubmit}>Зарегистрироваться</button>
         <p className="auth__text">Уже зарегистрированы? <Link to="/sign-in" className="auth__text">Войти</Link></p>
       </div>
     </div>
